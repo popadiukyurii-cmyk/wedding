@@ -110,30 +110,21 @@
             margin-bottom: 25px;
         }
         
-        /* Декоративний напис LOVE */
+        /* Лаконічний та чистий напис LOVE під фотографією */
         .love-wrapper {
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
         .love-decorative {
             font-family: 'Manrope', sans-serif;
-            font-size: 7.5rem;
+            font-size: 6.5rem;
             font-weight: 800;
-            letter-spacing: 12px;
+            letter-spacing: 14px;
             color: var(--primary-olive);
             line-height: 1;
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            pointer-events: none;
+            margin-top: 20px;
             text-align: center;
             width: 100%;
-        }
-        .hero-photo {
-            position: relative;
-            z-index: 1;
         }
 
         /* Блок "Кохання завжди на часі" */
@@ -300,34 +291,11 @@
             border-radius: 50%;
         }
 
-        /* Деталі */
-        .details-title {
-            font-size: 2.5rem;
-            color: var(--primary-olive);
-            margin-bottom: 25px;
-        }
-        .details-subtitle {
-            font-size: 1.8rem;
-            color: var(--primary-olive);
-            margin-bottom: 15px;
-        }
+        /* Текстовий блок замість букета з ілюстрацією пляшечки */
         .bottle-photo-container {
             width: 100%;
-            max-width: 180px;
-            margin: 0 auto 20px auto;
-        }
-        .details-text {
-            font-size: 1rem;
-            color: var(--text-dark);
-            max-width: 480px;
-            margin: 0 auto 25px auto;
-            padding: 0 10px;
-        }
-        .details-final {
-            font-size: 1.4rem;
-            color: var(--primary-olive);
-            font-weight: 500;
-            margin-top: 20px;
+            max-width: 150px;
+            margin: 25px auto 0 auto;
         }
 
         /* Форма RSVP та Темно-зелений фінальний блок */
@@ -511,7 +479,6 @@
             <p class="wedding-date sans-text">26 · 09 · 2026</p>
             
             <div class="love-wrapper">
-                <!-- Класичний тег img для 100% стабільності завантаження -->
                 <img src="photo1.jpg" onerror="this.src='photo1.JPG'" alt="" class="full-width-photo hero-photo">[cite: 1]
                 <div class="love-decorative sans-text">LOVE</div>
             </div>
@@ -613,24 +580,19 @@
             </p>
         </section>
 
-        <!-- 7. ДЕТАЛІ -->
+        <!-- ТЕКСТ ПРО ПЛЯШЕЧКУ (Інтегрований перед фінальним блоком) -->
         <section class="reveal">
-            <h2 class="details-title serif-title">Деталі</h2>
+            <p class="serif-title" style="font-size: 1.8rem; color: var(--primary-olive); margin-bottom: 15px;">Замість букета</p>
+            <p class="sans-text" style="font-size: 1rem; color: var(--text-dark); max-width: 480px; margin: 0 auto; padding: 0 10px;">
+                Ми дуже любимо квіти, але, на жаль, не зможемо сповна насолодитися їхньою красою. Тож, якщо захочете, подаруйте нам пляшечку вашого улюбленого напою та невеличку листівку із зазначенням нагоди, з якої, на вашу думку, нам варто її відкоркувати. Нам буде дуже приємно згадувати вас у ці особливі моменти.
+            </p>
             
-            <div class="photo-container" style="margin-bottom: 30px;">
-                <img src="photo3.jpg" onerror="this.src='photo3.JPG'" alt="" class="full-width-photo">
-            </div>
-
-            <p class="details-subtitle serif-title">Замість букета</p>
-            
+            <!-- Повернене зображення пляшечки -->
             <div class="bottle-photo-container">
                 <img src="bottle.jpg" onerror="this.src='bottle.JPG'" alt="" style="width: 100%; height: auto; display: block;">
             </div>
-
-            <p class="details-text sans-text">
-                Ми дуже любимо квіти, але, на жаль, не зможемо сповна насолодитися їхньою красою. Тож, якщо захочете, подаруйте нам пляшечку вашого улюбленого напою та невеличку листівку із зазначенням нагоди, з якої, на вашу думку, нам варто її відкоркувати. Нам буде дуже приємно згадувати вас у ці особливі моменти.
-            </p>
-            <p class="details-final serif-title">Найголовніше — ваша присутність. 🤍</p>
+            
+            <p class="serif-title" style="font-size: 1.4rem; color: var(--primary-olive); font-weight: 500; margin-top: 25px;">Найголовніше — ваша присутність. 🤍</p>
         </section>
 
         <!-- 8. ФІНАЛЬНА СЕКЦІЯ -->
