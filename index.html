@@ -511,11 +511,8 @@
             <p class="wedding-date sans-text">26 · 09 · 2026</p>
             
             <div class="love-wrapper">
-                <picture>
-                    <source srcset="photo1.png" type="image/png">
-                    <source srcset="photo1.JPG" type="image/jpeg">
-                    <img src="photo1.jpg" alt="" class="full-width-photo hero-photo">
-                </picture>
+                <!-- Класичний тег img для 100% стабільності завантаження -->
+                <img src="photo1.jpg" onerror="this.src='photo1.JPG'" alt="" class="full-width-photo hero-photo">[cite: 1]
                 <div class="love-decorative sans-text">LOVE</div>
             </div>
         </section>
@@ -549,11 +546,7 @@
             <h2 class="venue-title serif-title">Місце проведення</h2>
             
             <div class="venue-photo-container">
-                <picture>
-                    <source srcset="nadiya_palace.png" type="image/png">
-                    <source srcset="nadiya_palace.JPG" type="image/jpeg">
-                    <img src="nadiya_palace.jpg" alt="" class="full-width-photo">
-                </picture>
+                <img src="nadiya_palace.jpg" onerror="this.src='nadiya_palace.JPG'" alt="" class="full-width-photo">
             </div>
 
             <p class="hotel-name serif-title">Nadiya Palace</p>
@@ -588,11 +581,7 @@
 
         <!-- 3. НОВИЙ БЛОК -->
         <div class="photo-container reveal">
-            <picture>
-                <source srcset="photo2.png" type="image/png">
-                <source srcset="photo2.JPG" type="image/jpeg">
-                <img src="photo2.jpg" alt="" class="full-width-photo">
-            </picture>
+            <img src="photo2.jpg" onerror="this.src='photo2.JPG'" alt="" class="full-width-photo">
             <p class="serif-title" style="font-size: 2rem; color: var(--primary-olive); margin-top: 25px; text-align: center;">
                 «Одна любов на все життя»
             </p>
@@ -629,21 +618,13 @@
             <h2 class="details-title serif-title">Деталі</h2>
             
             <div class="photo-container" style="margin-bottom: 30px;">
-                <picture>
-                    <source srcset="photo3.png" type="image/png">
-                    <source srcset="photo3.JPG" type="image/jpeg">
-                    <img src="photo3.jpg" alt="" class="full-width-photo">
-                </picture>
+                <img src="photo3.jpg" onerror="this.src='photo3.JPG'" alt="" class="full-width-photo">
             </div>
 
             <p class="details-subtitle serif-title">Замість букета</p>
             
             <div class="bottle-photo-container">
-                <picture>
-                    <source srcset="bottle.png" type="image/png">
-                    <source srcset="bottle.JPG" type="image/jpeg">
-                    <img src="bottle.jpg" alt="" style="width: 100%; height: auto; display: block;">
-                </picture>
+                <img src="bottle.jpg" onerror="this.src='bottle.JPG'" alt="" style="width: 100%; height: auto; display: block;">
             </div>
 
             <p class="details-text sans-text">
@@ -652,13 +633,9 @@
             <p class="details-final serif-title">Найголовніше — ваша присутність. 🤍</p>
         </section>
 
-        <!-- 8. ФІНАЛЬНА СЕКЦІЯ (Перед зеленим RSVP) -->
+        <!-- 8. ФІНАЛЬНА СЕКЦІЯ -->
         <div class="photo-container reveal" style="margin-bottom: 0;">
-            <picture>
-                <source srcset="photo4.png" type="image/png">
-                <source srcset="photo4.JPG" type="image/jpeg">
-                <img src="photo4.jpg" alt="" class="full-width-photo">
-            </picture>
+            <img src="photo4.jpg" onerror="this.src='photo4.JPG'" alt="" class="full-width-photo">
         </div>
 
         <!-- ТЕМНО-ЗЕЛЕНИЙ БЛОК RSVP -->
@@ -722,13 +699,9 @@
             </div>
         </section>
 
-        <!-- 9. НОВА СВІТЛА ФІНАЛЬНА СЕКЦІЯ (Тепер тут photo5.jpg) -->
+        <!-- 9. СВІТЛА ФІНАЛЬНА СЕКЦІЯ (photo5.jpg) -->
         <div class="final-light-plate reveal">
-            <picture>
-                <source srcset="photo5.png" type="image/png">
-                <source srcset="photo5.JPG" type="image/jpeg">
-                <img src="photo5.jpg" alt="" class="full-width-photo">
-            </picture>
+            <img src="photo5.jpg" onerror="this.src='photo5.JPG'" alt="" class="full-width-photo">
         </div>
 
     </div>
