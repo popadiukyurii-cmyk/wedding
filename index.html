@@ -110,7 +110,7 @@
             margin-bottom: 25px;
         }
         
-        /* Декоративний напис LOVE з ефектом перекриття та оновленим кольором форми */
+        /* Декоративний напис LOVE */
         .love-wrapper {
             position: relative;
             margin-bottom: 50px;
@@ -120,11 +120,10 @@
             font-size: 7.5rem;
             font-weight: 800;
             letter-spacing: 12px;
-            color: var(--primary-olive); /* Тепер колір як у форми заповнення */
-            opacity: 0.15;                /* Легка прозорість для графічного ефекту */
+            color: var(--primary-olive);
             line-height: 1;
             position: absolute;
-            bottom: -35px;
+            bottom: -40px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 2;
@@ -496,21 +495,8 @@
 
         .final-light-plate {
             background-color: var(--bg-color);
-            padding: 60px 20px;
-        }
-        .couple-illustration-container {
-            width: 100%;
-            max-width: 220px;
-            margin: 0 auto;
-        }
-        .couple-svg {
-            width: 100%;
-            height: auto;
-            fill: none;
-            stroke: var(--primary-olive);
-            stroke-width: 1.1;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+            padding: 0;
+            margin: 0;
         }
     </style>
 </head>
@@ -524,9 +510,12 @@
             <h1 class="serif-title">Юрій & Поліна</h1>
             <p class="wedding-date sans-text">26 · 09 · 2026</p>
             
-            <!-- Головне фото із накладанням декоративного напису LOVE -->
             <div class="love-wrapper">
-                <img src="photo1.jpg" alt="" class="full-width-photo hero-photo">
+                <picture>
+                    <source srcset="photo1.png" type="image/png">
+                    <source srcset="photo1.JPG" type="image/jpeg">
+                    <img src="photo1.jpg" alt="" class="full-width-photo hero-photo">
+                </picture>
                 <div class="love-decorative sans-text">LOVE</div>
             </div>
         </section>
@@ -539,13 +528,11 @@
                 Будемо безмежно щасливі розділити з вами один із найважливіших днів нашого життя. Запрошуємо вас стати частиною цього особливого свята!
             </p>
             
-            <!-- Календар-акцент -->
             <div class="calendar-highlight sans-text">
                 24 25 <span class="active">26</span> 27 28
                 <div style="font-size: 0.85rem; letter-spacing: 3px; margin-top: 12px; text-transform: uppercase; font-weight: 500;">Вересня</div>
             </div>
 
-            <!-- Таймер зворотного відліку -->
             <div class="countdown-container sans-text">
                 <p class="countdown-title">До зустрічі залишилось</p>
                 <div class="countdown">
@@ -562,7 +549,11 @@
             <h2 class="venue-title serif-title">Місце проведення</h2>
             
             <div class="venue-photo-container">
-                <img src="nadiya_palace.jpg" alt="" class="full-width-photo">
+                <picture>
+                    <source srcset="nadiya_palace.png" type="image/png">
+                    <source srcset="nadiya_palace.JPG" type="image/jpeg">
+                    <img src="nadiya_palace.jpg" alt="" class="full-width-photo">
+                </picture>
             </div>
 
             <p class="hotel-name serif-title">Nadiya Palace</p>
@@ -597,7 +588,11 @@
 
         <!-- 3. НОВИЙ БЛОК -->
         <div class="photo-container reveal">
-            <img src="photo2.jpg" alt="" class="full-width-photo">
+            <picture>
+                <source srcset="photo2.png" type="image/png">
+                <source srcset="photo2.JPG" type="image/jpeg">
+                <img src="photo2.jpg" alt="" class="full-width-photo">
+            </picture>
             <p class="serif-title" style="font-size: 2rem; color: var(--primary-olive); margin-top: 25px; text-align: center;">
                 «Одна любов на все життя»
             </p>
@@ -634,13 +629,21 @@
             <h2 class="details-title serif-title">Деталі</h2>
             
             <div class="photo-container" style="margin-bottom: 30px;">
-                <img src="photo3.jpg" alt="" class="full-width-photo">
+                <picture>
+                    <source srcset="photo3.png" type="image/png">
+                    <source srcset="photo3.JPG" type="image/jpeg">
+                    <img src="photo3.jpg" alt="" class="full-width-photo">
+                </picture>
             </div>
 
             <p class="details-subtitle serif-title">Замість букета</p>
             
             <div class="bottle-photo-container">
-                <img src="bottle.jpg" alt="" style="width: 100%; height: auto; display: block;">
+                <picture>
+                    <source srcset="bottle.png" type="image/png">
+                    <source srcset="bottle.JPG" type="image/jpeg">
+                    <img src="bottle.jpg" alt="" style="width: 100%; height: auto; display: block;">
+                </picture>
             </div>
 
             <p class="details-text sans-text">
@@ -649,9 +652,13 @@
             <p class="details-final serif-title">Найголовніше — ваша присутність. 🤍</p>
         </section>
 
-        <!-- 8. ФІНАЛЬНА СЕКЦІЯ -->
+        <!-- 8. ФІНАЛЬНА СЕКЦІЯ (Перед зеленим RSVP) -->
         <div class="photo-container reveal" style="margin-bottom: 0;">
-            <img src="photo4.jpg" alt="" class="full-width-photo">
+            <picture>
+                <source srcset="photo4.png" type="image/png">
+                <source srcset="photo4.JPG" type="image/jpeg">
+                <img src="photo4.jpg" alt="" class="full-width-photo">
+            </picture>
         </div>
 
         <!-- ТЕМНО-ЗЕЛЕНИЙ БЛОК RSVP -->
@@ -715,18 +722,13 @@
             </div>
         </section>
 
-        <!-- СВІТЛА ФІНАЛЬНА СЕКЦІЯ -->
+        <!-- 9. НОВА СВІТЛА ФІНАЛЬНА СЕКЦІЯ (Тепер тут photo5.jpg) -->
         <div class="final-light-plate reveal">
-            <div class="couple-illustration-container">
-                <svg class="couple-svg" viewBox="0 0 100 120">
-                    <path d="M30 110 C30 80, 42 70, 45 60 C40 55, 40 45, 45 40 C48 35, 52 35, 55 40 C60 45, 60 55, 55 60 C58 70, 70 80, 70 110" />
-                    <path d="M45 60 L35 75 L20 70 M55 60 L65 70 L80 65" />
-                    <path d="M42 75 L58 75 M40 90 L60 90 M35 105 L65 105" />
-                    <circle cx="35" cy="75" r="3" />
-                    <circle cx="38" cy="73" r="2" />
-                    <circle cx="33" cy="78" r="2" />
-                </svg>
-            </div>
+            <picture>
+                <source srcset="photo5.png" type="image/png">
+                <source srcset="photo5.JPG" type="image/jpeg">
+                <img src="photo5.jpg" alt="" class="full-width-photo">
+            </picture>
         </div>
 
     </div>
