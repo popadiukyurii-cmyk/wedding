@@ -1,356 +1,589 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Юрій & Поліна — 26.09.2026</title>
-<meta name="description" content="Запрошення на весілля Юрія та Поліни · 26 вересня 2026 · Nadiya Palace, Івано-Франківськ">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Marck+Script&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --olive:#7a7a52;
-    --deep-green:#3f4a3a;
-    --beige:#d8cbb4;
-    --sand:#c9b899;
-    --milk:#f6f1e7;
-    --cream:#efe7d6;
-    --brown:#6b5744;
-    --caramel:#a9855f;
-    --taupe:#a99e8c;
-    --ink:#463f34;
-    --bg:#f6f1e7;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Montserrat',sans-serif;
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.7;
-    overflow-x:hidden;
-  }
-  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:400}
-  .script{font-family:'Marck Script',cursive}
-  section{padding:90px 22px;position:relative}
-  .wrap{max-width:760px;margin:0 auto;text-align:center}
-  .eyebrow{
-    letter-spacing:.5em;font-size:.72rem;text-transform:uppercase;
-    color:var(--caramel);margin-bottom:18px;font-weight:400;
-  }
-  .divider{width:56px;height:1px;background:var(--caramel);margin:26px auto;opacity:.6}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запрошення на весілля | Юра & Поліна</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fcf9f5;
+            --primary-olive: #556b2f;
+            --light-olive: #8fbc8f;
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --accent-earth: #b38b6d;
+            --milk: #fcf9f5;
+        }
 
-  /* reveal animation */
-  .reveal{opacity:0;transform:translateY(34px);transition:opacity 1s ease,transform 1s ease}
-  .reveal.show{opacity:1;transform:none}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  /* HERO */
-  .hero{
-    min-height:100vh;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;text-align:center;
-    background:linear-gradient(rgba(63,74,58,.45),rgba(63,74,58,.55)),
-      radial-gradient(circle at 50% 30%, #6d7358, #3f4a3a);
-    color:var(--milk);padding:22px;
-  }
-  .hero .eyebrow{color:var(--beige)}
-  .hero .names{font-size:clamp(3.2rem,13vw,7rem);line-height:1;letter-spacing:.02em}
-  .hero .amp{font-family:'Marck Script',cursive;font-size:.6em;display:inline-block;margin:0 .12em;color:var(--beige)}
-  .hero .date{
-    margin-top:26px;font-size:clamp(1rem,4vw,1.4rem);
-    letter-spacing:.55em;padding-left:.55em;font-weight:300;
-  }
-  .hero .sub{margin-top:34px;font-family:'Marck Script',cursive;font-size:1.5rem;color:var(--beige)}
-  .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
-    font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--beige);opacity:.85}
-  .scroll-hint::after{content:"";display:block;width:1px;height:34px;background:var(--beige);margin:10px auto 0;animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            text-align: center;
+            overflow-x: hidden;
+        }
 
-  /* quote blocks */
-  .quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,6vw,3rem);line-height:1.3;color:var(--deep-green)}
-  .quote .em{font-style:italic;color:var(--caramel)}
+        h1, h2, h3, .serif-font, .countdown-val {
+            font-family: 'Cormorant Garamond', serif;
+        }
 
-  .alt{background:var(--cream)}
-  .dark{background:var(--deep-green);color:var(--milk)}
-  .dark .eyebrow{color:var(--beige)}
-  .dark .quote{color:var(--milk)}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-  /* countdown */
-  .count{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:34px}
-  .count .box{
-    min-width:78px;padding:18px 10px;background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.2);border-radius:14px;backdrop-filter:blur(4px);
-  }
-  .count .num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;line-height:1}
-  .count .lbl{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;margin-top:8px;opacity:.85}
+        section {
+            padding: 50px 20px;
+            border-bottom: 1px solid #f0eae1;
+        }
 
-  /* timeline */
-  .timeline{max-width:440px;margin:36px auto 0;text-align:left}
-  .t-item{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid rgba(169,133,95,.3)}
-  .t-item:last-child{border-bottom:none}
-  .t-time{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--caramel);min-width:74px}
-  .t-title{font-weight:500;font-size:1rem}
-  .t-desc{font-size:.86rem;opacity:.75;margin-top:2px}
+        section:last-of-type {
+            border-bottom: none;
+        }
 
-  /* location */
-  .card{background:#fff;border-radius:18px;padding:34px 26px;box-shadow:0 18px 50px rgba(70,63,52,.1);margin-top:30px}
-  .place-name{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--deep-green)}
-  .place-addr{margin-top:6px;opacity:.8}
-  .note{margin-top:20px;font-size:.9rem;opacity:.85}
-  .note b{color:var(--caramel)}
-  .btn{
-    display:inline-block;margin-top:24px;padding:14px 34px;border-radius:40px;
-    background:var(--deep-green);color:var(--milk);text-decoration:none;
-    letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;
-    transition:transform .3s,background .3s;
-  }
-  .btn:hover{background:var(--caramel);transform:translateY(-2px)}
+        /* Анімація появи елементів (Reveal) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-  /* dress code swatches */
-  .swatches{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:34px}
-  .sw{text-align:center;width:82px}
-  .sw .dot{width:56px;height:56px;border-radius:50%;margin:0 auto 8px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
-  .sw span{font-size:.7rem;letter-spacing:.05em;opacity:.8}
-  .warn{margin-top:30px;font-size:.85rem;font-style:italic;opacity:.8}
+        /* Hero Section */
+        .hero {
+            padding-top: 60px;
+        }
+        .hero p.subtitle {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin: 20px 0;
+            color: var(--primary-olive);
+        }
+        .hero .date {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .hero .motto {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--accent-earth);
+            margin-bottom: 30px;
+        }
+        .save-the-date {
+            border: 1px solid var(--primary-olive);
+            display: inline-block;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
 
-  /* rsvp form */
-  form{max-width:440px;margin:34px auto 0;text-align:left}
-  .field{margin-bottom:18px}
-  .field label{display:block;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;opacity:.8}
-  .field input,.field select,.field textarea{
-    width:100%;padding:13px 15px;border:1px solid rgba(169,133,95,.4);border-radius:10px;
-    font-family:inherit;font-size:.95rem;background:#fff;color:var(--ink);
-  }
-  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--caramel)}
-  .radio-row{display:flex;gap:12px;flex-wrap:wrap}
-  .radio-row label{
-    flex:1;min-width:120px;display:flex;align-items:center;gap:8px;cursor:pointer;
-    padding:12px 14px;border:1px solid rgba(169,133,95,.4);border-radius:10px;background:#fff;
-    text-transform:none;letter-spacing:normal;font-size:.9rem;margin:0;
-  }
-  .radio-row input{width:auto;margin:0}
-  button.submit{
-    width:100%;padding:16px;border:none;border-radius:40px;cursor:pointer;
-    background:var(--deep-green);color:var(--milk);letter-spacing:.2em;
-    text-transform:uppercase;font-size:.75rem;transition:background .3s,transform .3s;
-  }
-  button.submit:hover{background:var(--caramel);transform:translateY(-2px)}
-  button.submit:disabled{opacity:.7;cursor:default}
-  .form-msg{margin-top:16px;text-align:center;font-size:.9rem;color:var(--deep-green);display:none}
+        /* Countdown Timer */
+        .countdown-container {
+            margin: 25px 0 10px 0;
+        }
+        .countdown-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .countdown-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+        }
+        .countdown-val {
+            font-size: 2.5rem;
+            color: var(--primary-olive);
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
 
-  footer{background:var(--deep-green);color:var(--milk);text-align:center;padding:70px 22px}
-  footer .monogram{font-family:'Marck Script',cursive;font-size:3.2rem;color:var(--beige)}
-  footer .rsvp-by{margin-top:14px;font-size:.85rem;letter-spacing:.1em;opacity:.85}
+        /* Фото-заглушки */
+        .photo-placeholder {
+            width: 100%;
+            height: 350px;
+            background-color: #e2e8f0;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-style: italic;
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+        }
 
-  @media(max-width:520px){
-    section{padding:70px 20px}
-    .count .box{min-width:66px}
-    .count .num{font-size:1.9rem}
-  }
-</style>
+        /* Вступ */
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-olive);
+        }
+        .intro p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* Календар */
+        .calendar-highlight {
+            font-size: 1.8rem;
+            margin: 30px 0 10px 0;
+            letter-spacing: 5px;
+            color: var(--text-muted);
+        }
+        .calendar-highlight span.active {
+            color: var(--primary-olive);
+            font-weight: bold;
+            border: 2px solid var(--primary-olive);
+            padding: 5px 10px;
+            border-radius: 50%;
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Місце проведення */
+        .venue h2 {
+            font-size: 2rem;
+            color: var(--primary-olive);
+            margin-bottom: 15px;
+        }
+        .venue .hotel-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .venue .address {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .bonus-box {
+            background-color: #f4f7f4;
+            border-left: 4px solid var(--light-olive);
+            padding: 15px;
+            text-align: left;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Таймінг / Розклад */
+        .timeline {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            border-left: 1px solid var(--light-olive);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            background-color: var(--primary-olive);
+            border-radius: 50%;
+        }
+        .time {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-olive);
+        }
+        .event-title {
+            font-weight: 500;
+            margin: 2px 0;
+        }
+        .event-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Дрес-код палітра */
+        .colors-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .color-circle {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        /* Стилізація Вашої форми RSVP */
+        #rsvpForm {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+            margin-top: 25px;
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .field label {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .field input[type="text"], .field select, .field textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            width: 100%;
+            background-color: #fff;
+        }
+        .field textarea {
+            resize: vertical;
+        }
+        .radio-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .radio-row label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .submit {
+            background-color: var(--primary-olive);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .submit:hover {
+            background-color: #3d4f22;
+        }
+        .submit:disabled {
+            background-color: var(--text-muted);
+            cursor: not-allowed;
+        }
+        .deadline {
+            color: var(--accent-earth);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-msg {
+            display: none; /* Показується скриптом за потреби */
+            background-color: #e6efe6;
+            color: var(--primary-olive);
+            border: 1px solid var(--light-olive);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        /* Стилі для оновленого Footer */
+        footer {
+            background-color: var(--primary-olive);
+            padding: 40px 20px;
+            color: var(--milk);
+        }
+        footer .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        footer .monogram {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+        footer .rsvp-by {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="eyebrow">Запрошення на весілля</div>
-  <h1 class="names">Юрій<span class="amp">&</span>Поліна</h1>
-  <div class="date">26 · 09 · 2026</div>
-  <div class="sub">Кохання завжди на часі</div>
-  <div class="scroll-hint">гортайте</div>
-</header>
+    <div class="container">
 
-<!-- INTRO -->
-<section class="wrap reveal">
-  <div class="eyebrow">Love</div>
-  <p class="quote">Дорогі гості! Будемо безмежно щасливі розділити з вами <span class="em">один із найважливіших днів</span> нашого життя.</p>
-  <div class="divider"></div>
-  <p style="max-width:520px;margin:0 auto;opacity:.85">Запрошуємо вас стати частиною цього особливого свята!</p>
-</section>
+        <!-- ГОЛОВНА -->
+        <section class="hero reveal">
+            <p class="subtitle">Запрошення на весілля</p>
+            <h1>Юра & Поліна</h1>
+            <p class="date">26.09.2026</p>
+            <p class="motto">Кохання завжди на часі</p>
+            <div class="save-the-date">[ SAVE THE DATE ]</div>
+            
+            <!-- Таймер зворотного відліку -->
+            <div class="countdown-container">
+                <p class="countdown-title">До весілля залишилось</p>
+                <div class="countdown">
+                    <div class="countdown-block"><span class="countdown-val" id="d">00</span><span class="countdown-label">Днів</span></div>
+                    <div class="countdown-block"><span class="countdown-val" id="h">00</span><span class="countdown-label">Год</span></div>
+                    <div class="countdown-block"><span class="countdown-val" id="m">00</span><span class="countdown-label">Хв</span></div>
+                    <div class="countdown-block"><span class="countdown-val" id="s">00</span><span class="countdown-label">Сек</span></div>
+                </div>
+            </div>
 
-<!-- COUNTDOWN -->
-<section class="dark">
-  <div class="wrap reveal">
-    <div class="eyebrow">До зустрічі лишилось</div>
-    <p class="quote" style="font-size:clamp(1.4rem,5vw,2rem)">Одна любов на все життя</p>
-    <div class="count" id="countdown">
-      <div class="box"><div class="num" id="d">00</div><div class="lbl">днів</div></div>
-      <div class="box"><div class="num" id="h">00</div><div class="lbl">годин</div></div>
-      <div class="box"><div class="num" id="m">00</div><div class="lbl">хвилин</div></div>
-      <div class="box"><div class="num" id="s">00</div><div class="lbl">секунд</div></div>
+            <div class="photo-placeholder" style="background-image: url('photo1.jpg');">
+                [ Тут буде ваше перше фото ]
+            </div>
+        </section>
+
+        <!-- ВСТУП -->
+        <section class="intro reveal">
+            <h2>Дорогі наші рідні та друзі!</h2>
+            <p>Будемо безмежно щасливі розділити з вами один із найважливіших днів нашого життя.</p>
+            <p>Запрошуємо вас стати частиною цього особливого свята!</p>
+            
+            <div class="calendar-highlight">
+                24 25 <span class="active">26</span> 27 28
+                <div style="font-size: 1rem; letter-spacing: 3px; margin-top: 10px; text-transform: uppercase;">Вересня</div>
+            </div>
+        </section>
+
+        <!-- МІСЦЕ ПРОВЕДЕННЯ -->
+        <section class="venue reveal">
+            <h2>Місце проведення</h2>
+            <div class="photo-placeholder" style="background-image: url('nadiya_palace.jpg'); height: 250px;">
+                [ Зображення Nadiya Palace ]
+            </div>
+            <p class="hotel-name">Nadiya Palace</p>
+            <p class="address">м. Івано-Франківськ, вул. Січових Стрільців, 12</p>
+            
+            <div class="bonus-box">
+                Для наших гостей готель надає знижку 50% на проживання. Будь ласка, повідомте нас, якщо потрібно буде забронювати номер.
+            </div>
+        </section>
+
+        <!-- РОЗКЛАД -->
+        <section class="reveal">
+            <h2 style="font-size: 2rem; color: var(--primary-olive); margin-bottom: 25px;">Розклад дня</h2>
+            
+            <div class="photo-placeholder" style="background-image: url('photo2.jpg'); height: 300px; margin-bottom: 30px;">
+                [ Фото вашого танцю ]
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">13:30</div>
+                    <div class="event-title">Збір гостей</div>
+                    <div class="event-desc">Зустрічаємось та наповнюємось теплом дня</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">14:00</div>
+                    <div class="event-title">Церемонія на даху</div>
+                    <div class="event-desc">До зустрічі біля вівтаря</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">15:00 - 22:00</div>
+                    <div class="event-title">Банкет в ресторані</div>
+                    <div class="event-desc">Святкуємо разом до пізньої ночі</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ДРЕС-КОД -->
+        <section class="reveal">
+            <h2 style="font-size: 2rem; color: var(--primary-olive); margin-bottom: 10px;">Дрес-код</h2>
+            <p style="font-style: italic; color: var(--accent-earth); margin-bottom: 15px;">Natural & Earth Tones</p>
+            
+            <p style="font-size: 0.95rem; color: var(--text-muted);">
+                Найголовніше для нас — ваша присутність. А якщо захочете, будемо раді, якщо ви підтримаєте атмосферу нашого дня, обравши образи у природній палітрі.
+            </p>
+
+            <div class="colors-container">
+                <div class="color-circle" style="background-color: #c2d3b4;"></div>
+                <div class="color-circle" style="background-color: #7d8c54;"></div>
+                <div class="color-circle" style="background-color: #4b5330;"></div>
+                <div class="color-circle" style="background-color: #dedfa3;"></div>
+                <div class="color-circle" style="background-color: #c7cbd1;"></div>
+                <div class="color-circle" style="background-color: #edd1cb;"></div>
+                <div class="color-circle" style="background-color: #e5dac9;"></div>
+                <div class="color-circle" style="background-color: #e0be9b;"></div>
+                <div class="color-circle" style="background-color: #7c604d;"></div>
+                <div class="color-circle" style="background-color: #59352b;"></div>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">
+                Якщо у вас немає саме такого кольору — не хвилюйтеся. Інші природні відтінки також чудово підійдуть.
+            </p>
+        </section>
+
+        <!-- ДЕТАЛІ -->
+        <section class="reveal">
+            <h2 style="font-size: 2rem; color: var(--primary-olive); margin-bottom: 15px;">Деталі</h2>
+            <p style="font-weight: 500; margin-bottom: 10px;">Замість букету</p>
+            
+            <div class="photo-placeholder" style="background-image: url('bottle.jpg'); height: 200px; width: 150px; margin: 15px auto;">
+                [ Пляшка ]
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); padding: 0 10px;">
+                Ми дуже любимо квіти але, на жаль, не зможемо сповна насолодитися їхньою красою. Тож, якщо захочете, подаруйте нам пляшечку вашого улюбленого напою та невеличку листівку із зазначенням нагоди, з якої, на вашу думку, нам варто її відкоркувати. Нам буде дуже приємно згадувати вас у ці особливі моменти.
+            </p>
+        </section>
+
+        <!-- RSVP ФОРМА -->
+        <section class="reveal" style="background-color: #faf6f0;" id="rsvpSection">
+            <p class="deadline">Просимо підтвердити свою присутність до 20.08.2026</p>
+            
+            <form id="rsvpForm" action="https://formsubmit.co/eugenefarial@gmail.com" method="POST">
+                <!-- службові налаштування FormSubmit -->
+                <input type="hidden" name="_subject" value="Нове підтвердження RSVP — весілля Y & P">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://pollydesign-creator.github.io/my-website/?sent=1">
+                <!-- анти-спам приманка (гості її не бачать) -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <div class="field">
+                    <label>Ваше ім'я та прізвище</label>
+                    <input type="text" name="Імʼя" required placeholder="Ім'я Прізвище">
+                </div>
+                
+                <div class="field">
+                    <label>Чи будете ви присутні?</label>
+                    <div class="radio-row">
+                        <label><input type="radio" name="Присутність" value="Так, буду" required> Так, буду 🤍</label>
+                        <label><input type="radio" name="Присутність" value="На жаль, ні"> На жаль, ні</label>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label>Кількість гостей</label>
+                    <select name="Кількість гостей">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                
+                <div class="field">
+                    <label>Побажання щодо меню / коментар</label>
+                    <textarea name="Коментар" rows="3" placeholder="Алергії, вподобання, побажання..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit">Надіслати відповідь</button>
+                <div class="form-msg" id="formMsg">Дякуємо! Ваша відповідь врахована 🤍</div>
+            </form>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="reveal">
+                <p class="quote" style="color:var(--milk)">До зустрічі на нашому святі!</p>
+                <div class="monogram">Y & P</div>
+                <div class="rsvp-by">26 · 09 · 2026</div>
+            </div>
+        </footer>
+
     </div>
-  </div>
-</section>
 
-<!-- TIMELINE -->
-<section class="wrap reveal">
-  <div class="eyebrow">Розклад</div>
-  <h2 class="quote">Таймінг дня</h2>
-  <div class="timeline">
-    <div class="t-item">
-      <div class="t-time">13:30</div>
-      <div><div class="t-title">Збір гостей</div><div class="t-desc">Зустрічаємось та наповнюємось теплом дня</div></div>
-    </div>
-    <div class="t-item">
-      <div class="t-time">14:00</div>
-      <div><div class="t-title">Церемонія на даху</div><div class="t-desc">До зустрічі біля вівтаря</div></div>
-    </div>
-    <div class="t-item">
-      <div class="t-time">15:00</div>
-      <div><div class="t-title">Банкет в ресторані</div><div class="t-desc">Святкуємо разом до пізнього вечора</div></div>
-    </div>
-  </div>
-</section>
+    <!-- СКРИПТИ -->
+    <script>
+        // Countdown (Зворотний відлік)
+        var target = new Date('2026-09-26T14:00:00+03:00').getTime();
+        function tick(){
+            var now = Date.now();
+            var diff = Math.max(0, target - now);
+            var d = Math.floor(diff / 86400000); diff -= d * 86400000;
+            var h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+            var m = Math.floor(diff / 60000);    diff -= m * 60000;
+            var s = Math.floor(diff / 1000);
+            var p = function(n){ return String(n).padStart(2, '0'); };
+            document.getElementById('d').textContent = d;
+            document.getElementById('h').textContent = p(h);
+            document.getElementById('m').textContent = p(m);
+            document.getElementById('s').textContent = p(s);
+        }
+        tick();
+        setInterval(tick, 1000);
 
-<!-- LOCATION -->
-<section class="alt">
-  <div class="wrap reveal">
-    <div class="eyebrow">Location</div>
-    <h2 class="quote">Місце святкування</h2>
-    <div class="card">
-      <div class="place-name">Nadiya Palace</div>
-      <div class="place-addr">м. Івано-Франківськ · вул. Січових Стрільців, 12</div>
-      <p class="note">Для наших гостей готель надає знижку <b>50%</b> на проживання. Будь ласка, повідомте нас, якщо потрібно буде забронювати номер.</p>
-      <a class="btn" target="_blank" rel="noopener"
-        href="https://www.google.com/maps/search/?api=1&query=Nadiya+Palace+%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA+%D0%B2%D1%83%D0%BB.+%D0%A1%D1%96%D1%87%D0%BE%D0%B2%D0%B8%D1%85+%D0%A1%D1%82%D1%80%D1%96%D0%BB%D1%8C%D1%86%D1%96%D0%B2+12">Відкрити карту</a>
-    </div>
-  </div>
-</section>
+        // Scroll reveal (Плавна поява під час скролу)
+        var io = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){ 
+                if(e.isIntersecting) e.target.classList.add('show'); 
+            });
+        }, { threshold: .15 });
+        document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
-<!-- DRESS CODE -->
-<section class="wrap reveal">
-  <div class="eyebrow">Dress code</div>
-  <h2 class="quote">Natural & Earth Tones</h2>
-  <div class="divider"></div>
-  <p style="max-width:520px;margin:0 auto;opacity:.85">Запрошуємо підтримати атмосферу нашого дня, обравши образи у природній палітрі — відтінках землі, трав і сонця.</p>
-  <div class="swatches">
-    <div class="sw"><div class="dot" style="background:#7a7a52"></div><span>Оливковий</span></div>
-    <div class="sw"><div class="dot" style="background:#3f4a3a"></div><span>Темно-зелений</span></div>
-    <div class="sw"><div class="dot" style="background:#d8cbb4"></div><span>Бежевий</span></div>
-    <div class="sw"><div class="dot" style="background:#c9b899"></div><span>Пісочний</span></div>
-    <div class="sw"><div class="dot" style="background:#f6f1e7"></div><span>Молочний</span></div>
-    <div class="sw"><div class="dot" style="background:#efe7d6"></div><span>Кремовий</span></div>
-    <div class="sw"><div class="dot" style="background:#6b5744"></div><span>Коричневий</span></div>
-    <div class="sw"><div class="dot" style="background:#a9855f"></div><span>Карамельний</span></div>
-    <div class="sw"><div class="dot" style="background:#a99e8c"></div><span>Тауп</span></div>
-  </div>
-  <p class="warn">Просимо уникати білого та неонових кольорів.</p>
-</section>
+        // Показ подяки після редіректу від FormSubmit (?sent=1)
+        if (location.search.indexOf('sent=1') !== -1) {
+            var msg = document.getElementById('formMsg');
+            if (msg) {
+                msg.style.display = 'block';
+                msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
 
-<!-- DETAILS / GIFTS -->
-<section class="dark">
-  <div class="wrap reveal">
-    <div class="eyebrow">Деталі</div>
-    <h2 class="quote">Кілька слів</h2>
-    <div class="divider"></div>
-    <p style="max-width:560px;margin:0 auto 22px;opacity:.9">Найцінніше для нас — <b>ваша присутність</b> у цей день. Якщо ж ви плануєте зробити нам подарунок, будемо вдячні за внесок у наш перший сімейний бюджет — це стане найкращим подарунком для початку нашої спільної історії.</p>
-    <p style="max-width:560px;margin:0 auto;opacity:.9">Також маємо невелике побажання. Ми дуже любимо квіти, але, на жаль, не зможемо сповна насолодитися їхньою красою. Тож замість букета подаруйте нам <b>пляшечку вашого улюбленого напою</b> та невеличку листівку із зазначенням нагоди, з якої, на вашу думку, нам варто її відкоркувати.</p>
-  </div>
-</section>
-
-<!-- RSVP -->
-<section class="alt">
-  <div class="wrap reveal">
-    <div class="eyebrow">RSVP</div>
-    <h2 class="quote">Підтвердіть присутність</h2>
-    <p style="opacity:.8;margin-top:6px">Будь ласка, дайте відповідь до <b>20.08.2026</b></p>
-
-    <!--
-      ========================================================================
-      УВАГА: замініть YOUR_EMAIL@example.com на вашу справжню пошту (двічі:
-      в action нижче та в полі _replyto нема потреби, воно бере email гостя).
-      Приклад: action="https://formsubmit.co/pollydesign@gmail.com"
-
-      ПІСЛЯ ПЕРШОГО НАДСИЛАННЯ FormSubmit надішле вам лист-підтвердження —
-      натисніть у ньому кнопку активації один раз, і форма запрацює назавжди.
-      Реєстрація НЕ потрібна.
-      ========================================================================
-    -->
-    <form id="rsvpForm" action="https://formsubmit.co/eugenefarial@gmail.com" method="POST">
-      <!-- службові налаштування FormSubmit -->
-      <input type="hidden" name="_subject" value="Нове підтвердження RSVP — весілля Y & P">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://pollydesign-creator.github.io/my-website/?sent=1">
-      <!-- анти-спам приманка (гості її не бачать) -->
-      <input type="text" name="_honey" style="display:none">
-
-      <div class="field">
-        <label>Ваше ім'я та прізвище</label>
-        <input type="text" name="Імʼя" required placeholder="Ім'я Прізвище">
-      </div>
-      <div class="field">
-        <label>Чи будете ви присутні?</label>
-        <div class="radio-row">
-          <label><input type="radio" name="Присутність" value="Так, буду" required> Так, буду 🤍</label>
-          <label><input type="radio" name="Присутність" value="На жаль, ні"> На жаль, ні</label>
-        </div>
-      </div>
-      <div class="field">
-        <label>Кількість гостей</label>
-        <select name="Кількість гостей">
-          <option>1</option><option>2</option><option>3</option><option>4</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Побажання щодо меню / коментар</label>
-        <textarea name="Коментар" rows="3" placeholder="Алергії, вподобання, побажання..."></textarea>
-      </div>
-      <button type="submit" class="submit">Надіслати відповідь</button>
-      <div class="form-msg" id="formMsg">Дякуємо! Ваша відповідь врахована 🤍</div>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="reveal">
-    <p class="quote" style="color:var(--milk)">До зустрічі на нашому святі!</p>
-    <div class="monogram">Y & P</div>
-    <div class="rsvp-by">26 · 09 · 2026</div>
-  </div>
-</footer>
-
-<script>
-  // Countdown
-  var target = new Date('2026-09-26T14:00:00+03:00').getTime();
-  function tick(){
-    var now = Date.now();
-    var diff = Math.max(0, target - now);
-    var d = Math.floor(diff / 86400000); diff -= d * 86400000;
-    var h = Math.floor(diff / 3600000);  diff -= h * 3600000;
-    var m = Math.floor(diff / 60000);    diff -= m * 60000;
-    var s = Math.floor(diff / 1000);
-    var p = function(n){ return String(n).padStart(2, '0'); };
-    document.getElementById('d').textContent = d;
-    document.getElementById('h').textContent = p(h);
-    document.getElementById('m').textContent = p(m);
-    document.getElementById('s').textContent = p(s);
-  }
-  tick();
-  setInterval(tick, 1000);
-
-  // Scroll reveal
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('show'); });
-  }, { threshold: .15 });
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
-  // Показ подяки після редіректу від FormSubmit (?sent=1)
-  if (location.search.indexOf('sent=1') !== -1) {
-    var msg = document.getElementById('formMsg');
-    if (msg) {
-      msg.style.display = 'block';
-      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-
-  // Легка індикація під час надсилання
-  document.getElementById('rsvpForm').addEventListener('submit', function(){
-    var btn = this.querySelector('button');
-    btn.textContent = 'Надсилаємо…';
-    btn.disabled = true;
-  });
-</script>
+        // Легка індикація під час надсилання
+        document.getElementById('rsvpForm').addEventListener('submit', function(){
+            var btn = this.querySelector('button');
+            btn.textContent = 'Надсилаємо…';
+            btn.disabled = true;
+        });
+    </script>
 </body>
 </html>
