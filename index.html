@@ -176,20 +176,47 @@
             margin-top: 5px;
         }
 
-        /* Календар */
+        /* Стилізація календаря з сердечком */
         .calendar-highlight {
             font-size: 1.6rem;
             margin: 25px 0 5px 0;
             letter-spacing: 6px;
             color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .calendar-highlight span.active {
+        .calendar-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        .calendar-day {
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+        }
+        .calendar-day.active {
             color: var(--primary-olive);
             font-weight: 600;
-            border: 1.5px solid var(--primary-olive);
-            padding: 4px 8px;
-            border-radius: 50%;
-            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        /* Декоративне SVG сердечко поверх цифри 26 */
+        .calendar-day.active::before {
+            content: "";
+            position: absolute;
+            top: 48%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            width: 48px;
+            height: 48px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234b5330' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/></svg>");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
         }
 
         /* Таймінг */
@@ -482,7 +509,7 @@
                 <img src="photo1.jpg" onerror="this.src='photo1.JPG'" alt="" class="full-width-photo hero-photo">
                 <div class="love-decorative sans-text">LOVE</div>
             </div>
-            <p class="sans-text" style="font-size: 0.8rem; letter-spacing: 3px; margin-top: 15px; color: var(--text-muted);">[ SAVE THE DATE ]</p>
+            <p class="sans-text" style="font-size: 0.8rem; letter-spacing: 3px; margin-top: 15px; color: var(--text-muted); text-transform: uppercase;">[ Save the Date ]</p>
         </section>
 
         <!-- БЛОК ПРИВІТАННЯ -->
@@ -493,10 +520,17 @@
                 Будемо безмежно щасливі розділити з вами один із найважливіших днів нашого життя. Запрошуємо вас стати частиною цього особливого свята!
             </p>
             
+            <!-- Оновлений блок календаря з фірмовим сердечком навколо 26 -->
             <div class="calendar-highlight sans-text">
                 <div style="font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase; font-weight: 500; color: var(--text-muted);">В цей день</div>
-                24 25 <span class="active">26</span> 27 28
-                <div style="font-size: 0.85rem; letter-spacing: 3px; margin-top: 12px; text-transform: uppercase; font-weight: 500;">Вересня</div>
+                <div class="calendar-row">
+                    <span class="calendar-day">24</span>
+                    <span class="calendar-day">25</span>
+                    <span class="calendar-day active">26</span>
+                    <span class="calendar-day">27</span>
+                    <span class="calendar-day">28</span>
+                </div>
+                <div style="font-size: 0.85rem; letter-spacing: 3px; margin-top: 15px; text-transform: uppercase; font-weight: 500;">Вересня</div>
             </div>
 
             <div class="countdown-container sans-text">
@@ -672,7 +706,7 @@
             </div>
         </section>
 
-        <!-- 9. СВІТЛА ФІНАЛЬНА СЕКЦІЯ (ФОТО-РОЗДІЛЬНИК 6) -->
+        <!-- 9. СВІТЛА ФІНАЛЬНА СЕКЦІЯ (photo5.jpg) -->
         <div class="final-light-plate reveal">
             <img src="photo5.jpg" onerror="this.src='photo5.JPG'" alt="" class="full-width-photo">
         </div>
